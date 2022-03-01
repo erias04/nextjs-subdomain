@@ -89,11 +89,11 @@ export default function SiteIndex() {
                         </p>
                         <a
                           onClick={(e) => e.stopPropagation()}
-                          href={`https://${data.site.subdomain}.vercel.pub/${post.slug}`}
+                          href={`https://${data.site.subdomain}.erias.link/${post.slug}`}
                           target="_blank"
                           className="font-cal px-3 py-1 tracking-wide rounded bg-gray-200 text-gray-600 absolute bottom-5 left-10 whitespace-nowrap"
                         >
-                          {data.site.subdomain}.vercel.pub/{post.slug} ↗
+                          {data.site.subdomain}.erias.link/{post.slug} ↗
                         </a>
                       </div>
                     </div>

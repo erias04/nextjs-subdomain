@@ -37,7 +37,7 @@ export default function Post(props) {
   const meta = {
     title: data.title,
     description: data.description,
-    ogUrl: `https://${data.site.subdomain}.vercel.pub/${data.slug}`,
+    ogUrl: `https://${data.site.subdomain}.erias.link/${data.slug}`,
     ogImage: data.image,
     logo: "/logo.png",
   };
@@ -211,7 +211,7 @@ async function getMdxSource(postContents) {
   const processedContent = await remark()
     .use(remarkMdx) // native remark plugin that parses markdown into MDX
     .use(replaceTweets) // replaces tweets with static <Tweet /> component
-    .use(() => replaceExamples(prisma)) // replaces examples with <Example /> component (only for demo.vercel.pub)
+    .use(() => replaceExamples(prisma)) // replaces examples with <Example /> component (only for demo.erias.link)
     .process(postContents);
 
   // Convert converted html to string format

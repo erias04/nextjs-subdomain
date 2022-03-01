@@ -88,7 +88,7 @@ export default async function post(req, res) {
         },
       });
       await revalidate(
-        `https://${response.site.subdomain}.vercel.pub`,
+        `https://${response.site.subdomain}.erias.link`,
         response.slug
       ); // revalidate for subdomain
       if (response.site.customDomain)
@@ -127,7 +127,7 @@ export default async function post(req, res) {
           published,
         },
       });
-      if (subdomain) await revalidate(`https://${subdomain}.vercel.pub`, slug); // revalidate for subdomain
+      if (subdomain) await revalidate(`https://${subdomain}.erias.link`, slug); // revalidate for subdomain
       if (customDomain) await revalidate(`https://${customDomain}`, slug); // revalidate for custom domain
       res.status(200).json(post);
     }
