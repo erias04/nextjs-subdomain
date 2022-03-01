@@ -16,7 +16,7 @@ export default function middleware(req) {
           .replace(`.erias.link`, "") // you have to replace ".erias.link" with your own domain if you deploy this example under your domain.
           .replace(`.platformize.vercel.app`, "") // you can use wildcard subdomains on .vercel.app links that are associated with your Vercel team slug
       : // in this case, our team slug is "platformize", thus *.platformize.vercel.app works
-        hostname.replace(`.localhost:3000`, "");
+        hostname.replace(`.erias.link:3000`, "");
 
   if (pathname.startsWith(`/_sites`)) {
     return new Response(null, { status: 404 });
@@ -34,7 +34,7 @@ export default function middleware(req) {
       url.pathname = `/app${pathname}`;
       return NextResponse.rewrite(url);
     } else if (
-      hostname === "localhost:3000" ||
+      hostname === "https://erias.link" ||
       hostname === "platformize.vercel.app"
     ) {
       url.pathname = `/home`;
