@@ -7,7 +7,7 @@ export default function middleware(req) {
 
   // only for demo purposes – remove this if you want to use your root domain as the landing page
   if (hostname === "erias.link" || hostname === "platforms.vercel.app") {
-    return NextResponse.redirect("https://demo.erias.link");
+    return NextResponse.redirect("https://app.erias.link");
   }
 
   const currentHost =
